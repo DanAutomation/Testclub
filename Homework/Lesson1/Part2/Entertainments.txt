@@ -1,0 +1,10 @@
+Class "Entertainments"
+Attributes:
+name of entertainment, people, animals, inventory, money, 
+types (celebration, non-celebration), time (minutes, hours, day, month, year), 
+area (night club, home, stadium etc.), internet, device (if with people).  
+State:
+Interesting, usefull, permicious, uninteresting, cheap, expensive, for family,
+for body, for children, time consuming
+Methods:
+walk, dance, drive, swim, relax, jump, watch football, read books, run, fire, shoot
