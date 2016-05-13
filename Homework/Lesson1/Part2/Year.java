@@ -1,43 +1,83 @@
 package Testclub;
 
 public class Year {
-	public String nameOfYear; //now it is internal attribute
-	public int numQuorter; //now it is internal attribute
-	public String nameSeason; //now it is internal attribute
+	private String nameOfYear; //now it is internal attribute
+	private int numQuorter; //now it is internal attribute
+	private String nameSeason; //now it is internal attribute
 	private int numMonth; //now it is internal attribute
 	private int numWeek; //now it is internal attribute
 	private int numDay; //now it is internal attribute
-	public int numHour; //now it is internal attribute
-	public int numMin; //now it is internal attribute
+	private int numHour; //now it is internal attribute
+	private int numMin; //now it is internal attribute
 	private int numSec; //now it is internal attribute
 	private int millSec; //now it is internal attribute
-	public String nameOfYear(){  // for identification of name
+	public String getNameOfYear(){  // get name of year
 		return nameOfYear; 
 	}
-	public void Quorter(int addQuorter){ // method use opportunity add quarter of year
-		numQuorter += addQuorter;
+	public void nameOfYear(String newName){  // set name of year
+		nameOfYear = newName; 
 	}
-	public String identName(){ // for identification of name
+	public void setQuorter(int addQuorter){ // set Quarter
+		numQuorter = addQuorter;
+	}
+	public int getQuortner(){ // get Quarter
+		return numQuorter;
+	}
+	public String getNameSeason(){ // get name of season
 		return nameSeason;
 	}
-	public void addMonth(int newMonth){ // for adding new month
-		numMonth = newMonth;
+	public void setNameSeason(String NewNameSeason){ // set name of year
+		season = nameSeason;
 	}
-	public void addDay(int newDay){ // for adding new day
-		numDay = newDay;
+	public int getNumMonth(){ // get number of month
+		return numMonth;
 	}
-	public void addHour(int newHour){ // for adding new hour
-		numHour = newHour;
+	public void setNumMonth(int numMonth1){ // set number of month
+		numMonth = numMonth1;
 	}
-	public int getMin(){ // for identification minute
+	public int getNumWeek(){ // get number of week
+		return numWeek;
+	}
+	public void setNumWeek(int numWeek){ // set number of week
+		numWeek = numWeek;
+	}
+	public int getNumDay(){ // get number of day
+		return numDay;
+	}
+	public void setNumDay(int numDay){ // set number of dayr
+		numDay = numDay;
+	}
+	public int getNumHour(){ // get number of hour
+		return numHour;
+	}
+	public void setNumHour(int numHour){ // set number of hour
+		numHour = numHour;
+	}
+	public int getNumMin(){ // get minutes
 		return numMin;
 	}
-	public int getMiliseconds(){ // for identification millisecond
-		return millSec;
+	public void setNumMin(int numMin){ // set minutes
+		numMin = numMin;
 	}
-	public int getSeconds(){ // for identification second
-		return millSec;
+	public int getNumSec(){ // get seconds
+		return numSec;
 	}
+	public void setNumSec(int numSec){ // set seconds
+		numSec = numSec;
+	}
+	public int getNumMillsec(){ // get milliseconds
+		return numMillsec;
+	}
+	public void setNumMillsec(int numMillSec){ // get milliseconds
+		millSec = nemMillSec;
+	}
+	
+	
+	
+		
+	
+	
+	
 	
 	
 

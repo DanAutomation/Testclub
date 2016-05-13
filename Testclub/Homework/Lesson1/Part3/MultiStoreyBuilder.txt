@@ -1,5 +1,0 @@
-Class "multi-storey building":
-attributes:
-service lift, passenger lift, garbage chute, number of storeys
-Methods:
-go up on the lift, go down on the lift, throwing garbage

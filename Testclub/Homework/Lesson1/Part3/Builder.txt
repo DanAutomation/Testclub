@@ -1,5 +1,0 @@
-Class "Builder":
-attributes: 
-roof, walls, enter, exit.
-methods: 
-can enter, can exit, walk inside.

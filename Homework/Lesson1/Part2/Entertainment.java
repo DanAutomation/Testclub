@@ -1,46 +1,75 @@
 package Lesson1;
 
 public class Entertainment {
-	public String entertainmentName; //now it is internal attribute
-	public String typeOfEntertainment; //now it is internal attribute
-	public boolean people; //now it is internal attribute
-	public boolean animals; //now it is internal attribute
+	private String entertainmentName; //now it is internal attribute
+	private String typeOfEntertainment; //now it is internal attribute
+	private boolean people; //now it is internal attribute
+	private boolean animals; //now it is internal attribute
 	private String inventary; //now it is internal attribute
 	private double money; //now it is internal attribute
 	private double time; //now it is internal attribute
-	public String area; //now it is internal attribute
+	private String area; //now it is internal attribute
 	private boolean device; //now it is internal attribute
 	private boolean internet; //now it is internal attribute
 	
-	public String inputName(String newEntertainmentName){ // ability change name of entertainment 
-		entertainmentName = newEntertainmentName;
+	public String getEntertainmentNameName(){ // created for getting information about name
 		return entertainmentName;
 	}
-	public String typeOfEntertainment(){ // here we can get type of entertainment
+	public void setEntertainmentName(String newEntertainmentName){ // change country of producer
+		entertainmentName = newEntertainmentName;
+	}
+	public String getTypeOfEntertainment(){ // created for getting information about name
 		return typeOfEntertainment;
 	}
-	public boolean willPeople(){ // get information about existence people on entertainment
+	public void setTypeOfEntertainment(String newTypeOfEntertainment){ // change country of producer
+		typeOfEntertainment = newTypeOfEntertainment;
+	}
+	private boolean getPeople(){ // created for getting information about name
 		return people;
 	}
-	public boolean willAnimals(){ // get information about existence animals on entertainment
+	private void setPeople(String newPeople){ // change country of producer
+		people = newPeople;
+	}
+	private boolean getAnimals(){ // created for getting information about name
 		return animals;
 	}
-	private String getInventary(){ // how will participate inventary in entertainment
+	private void setPAnimals(String newAnimals){ // change country of producer
+		animals = newAnimals;
+	}
+	public String getInventary(){ // created for getting information about name
 		return inventary;
 	}
-	private double howManyMoney(double money){ // this method determine participation money in entertainment
+	public void setInventary(String newInventary){ // change country of producer
+		inventary = newInventary;
+	}
+	private double getMoney(){ // created for getting information about name
 		return money;
 	}
-	public void getArea(String chosenAres){ // this method can choose area for entertainment
-		area = chosenAres;
+	private void setMoney(String newMoney){ // change country of producer
+		money = newMoney;
 	}
-	public boolean shouldHaveDevice(){ // use device for callback particpators or no?
+	public double getTime(){ // created for getting information about name
+		return time;
+	}
+	public void setTime(String newTime){ // change country of producer
+		time = newTime;
+	}
+	public double getArea(){ // created for getting information about name
+		return area;
+	}
+	public void setArea(String newArea){ // change country of producer
+		area = newArea;
+	}
+	public double getDevice(){ // created for getting information about name
 		return device;
 	}
-	private boolean withInternet(){ // use internet for research place, inventary and orther attributes
+	public void setDevice(String newDevice){ // change country of producer
+		device = newDevice;
+	}
+	public double getInternet(){ // created for getting information about name
 		return internet;
 	}
-	private void setTime(double minutes, double seconds, double hours){ // abbility set time in year
-		time = minutes + seconds + hours;
-	}	
+	public void setInternet(String newInternet){ // change country of producer
+		internet = newInternet;
+	}
 }

@@ -1,46 +1,79 @@
 package Testclub;
 
 public class MusicInstruments {
-	public String name; //now it is internal attribute 
-	public String countryOfProduce; //now it is internal attribute 
-	public String groupOfInstrument; //now it is internal attribute 
+	private String name; //now it is internal attribute 
+	private String countryOfProduce; //now it is internal attribute 
+	private String groupOfInstrument; //now it is internal attribute 
 	private String kindOfRegister; //now it is internal attribute 
-	public String abelePlay; //now it is internal attribute 
+	private String abelePlay; //now it is internal attribute 
 	private String color; //now it is internal attribute 
 	private int size; //now it is internal attribute 
 	private int weight; //now it is internal attribute 
 	private int height; //now it is internal attribute 
-	public String materialOfBudy; //now it is internal attribute 
+	private String materialOfBudy; //now it is internal attribute 
 	public String getName(){ // created for getting information about name
 		return name;
 	}
-	public String play(String useAir){ // use for realization process of playing
-		abelePlay += useAir;
-		return abelePlay;
+	public void setName(String newName){ // change country of producer
+		name = newName;
 	}
-	public void setCountry(String newCountry){ // change country of producer
-		countryOfProduce = newCountry;
-		
+	public String getCountryOfProduce(){ // created for getting information about name
+		return countryOfProduce;
 	}
-	public String group(){ // method refers tool for special group of instruments
+	public void setName(String newCountryOfProduce){ // change country of producer
+		countryOfProduce = newCountryOfProduce;
+	}
+	public String getGroupOfInstrument(){ // created for getting information about name
 		return groupOfInstrument;
 	}
-	private String register(){ // kind of register (high, low, middle)
+	public void setGroupOfInstrument(String newGroupOfInstrument){ // change country of producer
+		groupOfInstrument = newGroupOfInstrument;
+	}
+	private String getkindOfRegister(){ // created for getting information about name
 		return kindOfRegister;
 	}
-	private void setColor(String addColor){ // set color of instrument
-		color = addColor;
+	private void setkindOfRegister(String newkindOfRegister){ // change country of producer
+		kindOfRegister = newKindOfRegister;
 	}
-	private int getWeight(){ // getting weight of instrument
+	private String getAbelePlay(){ // created for getting information about name
+		return abelePlay;
+	}
+	private void setAbelePlay(String newAbelePlay){ // change country of producer
+		abelePlay = newAbelePlay;
+	}
+	public String getColor(){ // created for getting information about name
+		return color;
+	}
+	public void setColor(String newColor){ // change country of producer
+		color = newColor;
+	}
+	public int getSize(){ // created for getting information about name
+		return size;
+	}
+	public void setSize(String newSize){ // change country of producer
+		size = newSize;
+	}
+	private int getWeight(){ // created for getting information about name
 		return weight;
 	}
-	private int getHeight(){ // getting height of instrument
+	public void setWeight(String newWeight){ // change country of producer
+		weight = newWeight;
+	}
+	private int getHeight(){ // created for getting information about name
 		return height;
 	}
-	public void sings(){ // opportunity make sounds
+	private void setHeight(String newHeight){ // change country of producer
+		height = newHeight;
 	}
-	private void setSize(int newWeight, int newHeight){ // getting total size, using new data of size
-		size = newWeight + newHeight;
-		
+	private int getMaterialOfBody(){ // created for getting information about name
+		return materialOfBody;
 	}
+	private void setMaterialOfBody(String newMaterialOfBody){ // change country of producer
+		materialOfBody = newMaterialOfBody;
+	}
+	
+	
+	
+	
+	
 }

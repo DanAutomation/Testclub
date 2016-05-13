@@ -1,54 +1,82 @@
 
 public class WorkerOfCompany {
-	public String position; //now it is internal attribute
-	public String name; //now it is internal attribute
-	public String surname; //now it is internal attribute
+	private String position; //now it is internal attribute
+	private String name; //now it is internal attribute
+	private String surname; //now it is internal attribute
 	private int years; //now it is internal attribute
 	private int quonDiplomas; //now it is internal attribute
-	public String sex; //now it is internal attribute
+	private String sex; //now it is internal attribute
 	private int expInYears; //now it is internal attribute
 	private String hobby; //now it is internal attribute
 	private boolean married; //now it is internal attribute
-	public String persSkills; //now it is internal attribute
-	public String getName(){ // method getting name 
+	private String persSkills; //now it is internal attribute
+	
+	public String getName(){ // method helps to getting name 
 		return name;
 	}
-	public String getSurname(){ //  method getting name 
-		return surname;
+	public void setName(String newName){ //method helps to setting name 
+		name = newName;
 	}
-	public String getPosition(){ // method getting position
+	public String getPosition(){ // method helps to getting position
 		return position;
 	}
-	public void work(){ // method provide insight what person do in working time
+	public void setPosition(String newPosition){ //method helps to setting position
+		position = newPosition;
 	}
-	public void count(){ // method provide insight what person counting during working time
+	public String getSurname(){ // method helps to setting surname 
+		return surname;
 	}
-	public void sale(){ // method provide insight what person sale during working time
+	public void setSurname(String newSurname){ // method helps to getting surname 
+		surname = newSurname;
 	}
-	public void build(){ // method provide insight what person building during working time
-	}
-	public void sleep(){ // did person sleep in working time
-	}
-	private int howOld(){ // to know about age
+	private int getYears(){ // method helps to getting years 
 		return years;
 	}
-	private void setDiplomas(int newDiplom){ // method adding quantity of diplomas
-		quonDiplomas += newDiplom;
+	private void setYears(String newYears){ // method helps to getting years 
+		years = newYears;
 	}
-	public String getSex(){ // certain method can identification gender
+	private int getQuonDiplomas(){ // method helps to getting information about quantity of diplomas
+		return quonDiplomas;
+	}
+	private void setQuonDiplomas(String newQuonDiplomas){ // method helps to setting quantity of diplomas
+		surname = newQuonDiplomas;
+	}
+	public String getSex(){ // method helps to getting sex of worker
 		return sex;
 	}
-	private int getExperience(){ // method realized for information about experience
+	public void setSex(String newSex){ // method helps to setting sex of worker
+		sex = newSex;
+	}
+	private String getExpInYears(){ // method helps to getting experience in years
 		return expInYears;
 	}
-	private boolean getStatus(boolean foundLove){ // method provide insight about material status
-		return married;
+	private void setExpInYears(String newExpInYears){ // method helps to setting experience in years
+		expInYears = newExpInYears;
 	}
-	public String getSkills(){ // methods gives knowledge about skills worker
-		return persSkills;
+	public void setHobby(String newHobby){ // method helps set hobby
+		hobby = newHobby;
 	}
-	public String gethobby(){ // demonstrate knowledge of hobby
+	public String getHobby(){ // method helps get hobby 
 		return hobby;
 	}
+	public void setMarried(String newMarried){ //method helps set status of merried
+		married = newMarried;
+	}
+	public boolean getMarried(){ //method helps get status of merried
+		return married;
+	}
+	public void setPersSkills(String newPersSkills){ //method helps set personall skills
+		persSkills = newPersSkills;
+	}
+	public boolean getpersSkills(){ //method helps get personal skills
+		return perSkills;
+	}
+	
+	
+	
+	
+	
+	
+	
 
 }

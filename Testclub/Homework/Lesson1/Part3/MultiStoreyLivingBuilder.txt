@@ -1,5 +1,0 @@
-Class "Multi-storey living building"
-attributes:
-duplex flats, service staff, underground parking, 
-methods:
-CCTV, offices, gym, helipad
