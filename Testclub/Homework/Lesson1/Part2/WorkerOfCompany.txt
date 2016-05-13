@@ -1,0 +1,13 @@
+Class "Worker of company"
+Attributes: 
+position, name, surname, sex (man, woman, sales-manager:)),
+age, experience in years, education degree, avalibility of relevant diplomas (true, false),
+quontity of relevant diplomas, material status, hobby, personal skills.
+Status: 
+not work in working time(go to smoke, talk with colleagues, 
+drink tea/coffee), always working (junior worker), partly working (professional worker, owner's son), 
+stool pigeon, ass-lick, always late for work, pet chief, employees with star fever, 
+careerists, indifferent staff. 
+Methods:
+count (accounter), sale (seller), create (developer), testing (QA Engineer), read (librarian), sleep (watchman),
+fight (warrior), cooke, planning (analyst), sew (sewer).

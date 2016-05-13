@@ -1,0 +1,15 @@
+Class "Music instruments"
+Attributes:
+name, country producing, group of instruments (wind instruments, electro-musical instruments, 
+keyboards instruments, strings instruments, drums instruments), kind of register (high, middle, low),
+size, weight, height, color, body material (metal, wood, skin), 
+components of instrument (vulture, deck, strings, keys, plates), 
+existence of holes (yes, no), extent of opening (up, down), 
+belonging to the orchestra (Chamber, Symphony), .
+States: 
+standing, lying, taking in hands, moving in different directions, 
+high-frequency, low-frequency, main playing, accompanying-playing, new, 
+old, broken, playing using legs, playing using hands, using air for playing, 
+using touch for playing. 
+Methods:
+play, not play, sound, not sound, creak, whistle, rattle, string swings, blown sounds, stuffing bits.  

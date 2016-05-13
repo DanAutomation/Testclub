@@ -1,0 +1,5 @@
+Class "living builder" extend "Builder":
+attributes:
+stairs, windows, sewerage, electricity, flats, heating
+methods: 
+switch on / off electricuty, turn on / off crane, get heating

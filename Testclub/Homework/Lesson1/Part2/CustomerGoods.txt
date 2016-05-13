@@ -1,0 +1,16 @@
+Class "Customer goods"
+Attributes:
+date of producing, product shelf life, country producing, trademark (name, barcode, symbol, picture, brand-name), 
+clasification of goods (food, non-food), types of goods (FMCG, electronics, baked goods, fruits and vegetables, 
+confectionery, wine and spirits, soft drinks, milk, oil, meat and sausages, fish, egg, edible fats, tobacco products, 
+household goods and clothing, household chemical products, glass products, footwear products, metal products, 
+construction materials), brutto, netto, height, weight, package size, package form, package colour, 
+ability to transport (fragile, non-fragile, flammable).
+States:
+made in factory, handmade, kind of using (new, previously used), 
+existence deffects (without deffects, with defects), certified, non-certified, 
+can edible, overdue, working, non-working, moving, non-moving, flying, 
+non-flying, swim, non-swim, lasting, fragile, made for creation another goods.
+Methods:
+eate good, not eat good, move/non-move, play/non-play in toys, swim/non-swim in swiming pool, open/shut goods, 
+drink/not drink, deploy/wrap package, wear cloth-goods, watch electronics goods, listen electronics goods,  
