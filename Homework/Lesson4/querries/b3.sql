@@ -1,0 +1,1 @@
+SELECT airports FROM airports JOIN flights ON airports.airports = flights.departureAirport JOIN  airlines ON airlines.flightNumber = flights.flightNumbers WHERE airlines.webRegistration = 'yes' AND flights.arrivalAirport = 'Kiev' AND airports.dutyFree = 'yes'

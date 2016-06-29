@@ -1,0 +1,1 @@
+SELECT airlines.airline FROM airlines JOIN flights ON flights.flightNumbers = airlines.flightNumber WHERE flights.departureAirport = 'Beijing' AND flights.arrivalAirport = 'Helsinki'

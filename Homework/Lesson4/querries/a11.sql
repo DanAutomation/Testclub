@@ -1,0 +1,1 @@
+SELECT DISTINCT airline FROM airlines WHERE webRegistration = 'no'

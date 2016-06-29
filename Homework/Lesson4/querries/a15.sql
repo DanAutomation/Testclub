@@ -1,0 +1,1 @@
+SELECT flightNumber FROM airlines WHERE airline = 'WizzAir' AND isMealincluded = 'yes'AND additionalSpaceService = 'yes' AND webRegistration = 'yes'

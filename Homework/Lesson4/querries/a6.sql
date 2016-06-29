@@ -1,0 +1,1 @@
+SELECT flightNumbers FROM flights WHERE departureAirport = 'Prague' AND arrivalAirport = 'Kiev'

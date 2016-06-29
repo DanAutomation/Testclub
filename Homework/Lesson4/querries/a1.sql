@@ -1,0 +1,1 @@
+SELECT airports FROM airports

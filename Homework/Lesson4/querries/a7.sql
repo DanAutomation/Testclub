@@ -1,0 +1,1 @@
+SELECT DISTINCT flightNumbers FROM flights WHERE departureAirport = 'London'

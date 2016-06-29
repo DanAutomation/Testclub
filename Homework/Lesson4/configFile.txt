@@ -1,0 +1,10 @@
+DB's name = test
+username = root
+password = testclub
+querries:
+flights, airports, airlines - creation tables
+Insert_airlines, Insert_airports, Insert_flights - insert data in tables
+a1 - a15 simple scenarious
+b1 - b3 complex scenarious
+RunTest.java - interface
+Main.java - main class (testing framework)

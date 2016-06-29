@@ -1,0 +1,1 @@
+SELECT flights.flightNumbers FROM airports JOIN flights ON flights.flightNumbers = airports.airports WHERE flights.departureAirport = 'London' AND airports.dutyFree = 'no'

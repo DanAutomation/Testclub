@@ -1,0 +1,1 @@
+SELECT departureAirport, arrivalAirport FROM flights WHERE stopsNumber = 0

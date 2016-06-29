@@ -1,0 +1,1 @@
+SELECT flightNumbers FROM flights WHERE arrivalAirport = 'Helsinki' AND  departureAirport = 'New York' AND averageTicketPrice > 100 
