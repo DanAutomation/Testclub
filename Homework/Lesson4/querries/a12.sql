@@ -1,1 +1,0 @@
-SELECT flightNumber, airline FROM airlines WHERE additionalSpaceService = 'no'

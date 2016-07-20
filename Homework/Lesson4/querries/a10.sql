@@ -1,1 +1,0 @@
-SELECT departureAirport, arrivalAirport FROM flights WHERE availableSeats = 0

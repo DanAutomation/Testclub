@@ -1,4 +1,4 @@
-SELECT flights.departureAirport, flights.arrivalAirport, flights.averageTicketPrice, flights.availableSeats, airports.priorityBoarding, airlines.additionalSpaceService
+SELECT flights.departureAirport
 FROM flights
 INNER JOIN airports
 ON flights.flightNumbers = airports.airports
