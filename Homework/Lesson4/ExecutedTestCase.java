@@ -76,8 +76,6 @@ public class ExecutedTestCase extends TestCase{
 	
 	
 	public void setFinalResult() throws FileNotFoundException, IOException, WriteException{
-		// ??? true / false if actualResult == getActualResult
-		TestReport a = new TestReport();
         
 		for(int i = 0; i < 17; i++)
 		if(expectedResult.contains(getActualResult())){
@@ -90,18 +88,12 @@ public class ExecutedTestCase extends TestCase{
 		    cellFormat.setBorder(Border.ALL, BorderLineStyle.THICK);
 		    cellFormat.setLocked(false);
 		    cellFormat.setAlignment(Alignment.CENTRE);
-//			WritableWorkbook myWorkbook;
-//			WritableSheet mySheet1 = myWorkbook.mySheet2.addCell(label_70) 
-//		
-//	 		Label label_70 = new Label(i, 6, "PASSED", getCellFormat(Colour.GREEN, Border.ALL, Alignment.CENTRE));
-//	 		a.createReportWithHeader();
+
 			Label label = new Label(7, i, "PASSED", getCellFormat(Colour.GREEN, Border.ALL, Alignment.CENTRE));
 			mySheet1.addCell(label);
 			System.out.println("added");
  		}else{
-// 			//System.out.println(resF);
-// 			Label label_1 = new Label(7, i, "FAILED", cellFormat);
-//			mySheet1.addCell(label_1);
+
  			WritableWorkbook myWorkbook;
  			myWorkbook= Workbook.createWorkbook(new File("D:\\checklist.xls"));
  		    WritableSheet mySheet1 = myWorkbook.createSheet("Simple scenarios", 0);
