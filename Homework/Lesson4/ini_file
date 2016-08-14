@@ -1,0 +1,7 @@
+user=root
+password=testclub
+dburl=jdbc:mysql://localhost:3306/test
+queries=D:/projects/Test/src/Lesson4/queries
+createTables=D:/projects/Test/src/Lesson4/createTables
+fillTables=D:/projects/Test/src/Lesson4/fillTables
+report=D:/checklist.xls

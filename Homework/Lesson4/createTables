@@ -1,0 +1,3 @@
+airlines=CREATE TABLE `test`.`airlines` (`flightNumber` INT(4) NOT NULL, `airline` VARCHAR(45) NOT NULL, `additionalSpaceService` VARCHAR(3) NOT NULL, `webRegistration` VARCHAR(3) NOT NULL, `isMealincluded` VARCHAR(3) NOT NULL, PRIMARY KEY (`flightNumber`));
+airports=CREATE TABLE `test`.`airports` (`airports` VARCHAR(45) NOT NULL,`dutyFree` VARCHAR(4) NOT NULL,`priorityBoarding` VARCHAR(4) NOT NULL,  PRIMARY KEY (`airports`));
+flights=CREATE TABLE `test`.`flights` (`flightNumbers` INT NOT NULL, `departureAirport` VARCHAR(45) NOT NULL, `arrivalAirport` VARCHAR(45) NOT NULL, `stopsNumber` VARCHAR(45) NOT NULL, `averageTicketPrice` VARCHAR(45) NOT NULL, `availableSeats` VARCHAR(45) NOT NULL, PRIMARY KEY (`flightNumbers`));
