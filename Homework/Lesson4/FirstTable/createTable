@@ -1,0 +1,5 @@
+user=root
+password=testclub
+dburl=jdbc:mysql://localhost:3306/test
+table=CREATE TABLE `test`.`table1` (`Records` VARCHAR(45) NOT NULL,`Field1` VARCHAR(45) NOT NULL,`Field2` VARCHAR(45) NOT NULL,`Field3` VARCHAR(45) NOT NULL,PRIMARY KEY (`Field1`));
+fillTable=INSERT INTO `test`.`table1` (`Records`, `Field1`, `Field2`, `Field3`) VALUES ('Record1', 'Ab', 'fer', 'lik'), ('Record2', 'Nomo', 'jjj', 'llll');
