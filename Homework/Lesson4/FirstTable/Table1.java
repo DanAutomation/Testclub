@@ -8,6 +8,8 @@ import java.sql.*;
 import java.util.Properties;
 
 public class Table1 {
+	
+	
  // JDBC driver name and database URL
  static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
  static final String DB_URL = "jdbc:mysql://localhost:3306/test";
@@ -17,9 +19,22 @@ public class Table1 {
  static final String PASS = "testclub";
  
 public static void main(String[] args) throws SQLException{
+	
+	
+	Table1 a = new Table1();
+	a.getString();
+}
+
+public void getString(){
+    
+	
 	java.sql.Connection myConn = null;
-	Statement myStmt = null;
-	ResultSet myRes = null;
+
+	
+    
+    
+    
+//    a.printRs(rs);
  try{
 
     Class.forName("com.mysql.jdbc.Driver");
@@ -40,15 +55,16 @@ public static void main(String[] args) throws SQLException{
 	
 	System.out.println("\nConnection successful!\n");
 
-
-	props.load(new FileInputStream("D:/projects/Test/src/FirstTable/createTable"));
+    String table = "D:/projects/Test/src/FirstTable/createTable";  
 	
-	
+    props.load(new FileInputStream(table));
+    
 	String sql = props.getProperty("table");
 	String fillTable = props.getProperty("fillTable");
 	
 	PreparedStatement table1 = (PreparedStatement) myConn.prepareStatement(sql);
 	table1.executeUpdate(sql);
+	
 	PreparedStatement fillTab = (PreparedStatement) myConn.prepareStatement(fillTable);
 	fillTab.executeUpdate(fillTable);
 	
@@ -63,14 +79,20 @@ public static void main(String[] args) throws SQLException{
 	
     ResultSet rs = stmt.executeQuery(sql1);
 
+
     printRs(rs);
 
-    while(rs.next()){
-       System.out.println(rs.getString("Field1"));
-       System.out.println(rs.getString("Field2"));
-        System.out.println(rs.getString("Field3"));
-    }
-    printRs(rs);
+    //STEP 6: Loop through result set and add 5 in age
+    //Move to BFR postion so while-loop works properly
+ //   rs.beforeFirst();
+
+
+
+
+    //STEP 6: Loop through result set and add 5 in age
+    //Move to BFR postion so while-loop works properly
+
+//    printRs(rs);
 
 
     //STEP 8: Clean-up environment
@@ -93,13 +115,15 @@ public static void main(String[] args) throws SQLException{
     }//end finally try
  }//end try
 
+
 }//end main
 
  public static void printRs(ResultSet rs) throws SQLException{
     
     while(rs.next()){
     	
-//       String f = rs.getString("Field1") + "," + rs.getString("Field2") + "," + rs.getString("Field3");
+       String a = rs.getString("Field1") + "," + rs.getString("Field2") + "," + rs.getString("Field3");
+    	/*
        String str1 = rs.getString("Field1");
        String str2 = rs.getString("Field2");
        String str3 = rs.getString("Field3");
@@ -108,10 +132,16 @@ public static void main(String[] args) throws SQLException{
        a.append(str1).append(coma).append(str2).append(coma).append(str3);
        StringBuilder sb = new StringBuilder();
        a.append(","); 
+*/
+       
+       String[] b = a.split("(?=\\p{Lu})"); // split to low-case
+		for (int i = 0; i < b.length; i++){ // every element
+			System.out.print(b[i] + ","); // + space to upper
+		}
 
 
      //выводим результат
-       System.out.print(a);
+//       System.out.print(a);
 
        // .replaceAll("[\\s]", "")
        
