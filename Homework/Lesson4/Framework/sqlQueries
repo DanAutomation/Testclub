@@ -1,0 +1,19 @@
+sql1 = "SELECT airports FROM airports";
+sql2 = "SELECT flightNumbers FROM flights"; //
+sql3 = "SELECT DISTINCT airline FROM airlines"; //
+sql4 = "SELECT airports FROM airports WHERE dutyFree = 'yes'"; 
+sql5 = "SELECT airports FROM airports WHERE priorityBoarding = 'no'";
+sql6 = "SELECT DISTINCT flightNumbers FROM flights WHERE departureAirport = 'London'";
+sql7 = "SELECT flightNumbers FROM flights WHERE departureAirport = 'Prague' AND arrivalAirport = 'Kiev'";
+sql8 = "SELECT flightNumbers FROM flights WHERE arrivalAirport = 'Helsinki' AND  departureAirport = 'New York' AND averageTicketPrice > 100 "; // 1010
+sql9 = "SELECT DISTINCT airline FROM airlines WHERE webRegistration = 'no'";
+sql10 = "SELECT flightNumber FROM airlines WHERE airline = 'Virgin' AND isMealincluded = 'yes'";
+sql11 = "SELECT flightNumber FROM airlines WHERE airline = 'WizzAir' AND isMealincluded = 'yes'AND additionalSpaceService = 'yes' AND webRegistration = 'yes'";
+sql12 = "SELECT flights.flightNumbers FROM airports JOIN flights ON flights.flightNumbers = airports.airports WHERE flights.departureAirport = 'London' AND airports.dutyFree = 'no'";
+			// sheet 2
+sql13 = "SELECT airlines.airline FROM airlines JOIN flights ON flights.flightNumbers = airlines.flightNumber WHERE flights.departureAirport = 'Beijing' AND flights.arrivalAirport = 'Helsinki'";
+sql14 = "SELECT airports FROM airports JOIN flights ON airports.airports = flights.departureAirport JOIN  airlines ON airlines.flightNumber = flights.flightNumbers WHERE airlines.webRegistration = 'yes' AND flights.arrivalAirport = 'Kiev' AND airports.dutyFree = 'yes'";
+		    // stories:
+sql15 = "SELECT flights.departureAirport FROM flights INNER JOIN airports ON flights.flightNumbers = airports.airports JOIN airlines ON airports.airports = airlines.flightNumber WHERE flights.departureAirport = 'London' AND flights.arrivalAirport = 'Munich' AND flights.averageTicketPrice < 120 AND flights.availableSeats = 4 AND airports.priorityBoarding = 'yes' AND airlines.additionalSpaceService = 'yes'";
+sql16 = "SELECT DISTINCT flights.arrivalAirport FROM airlines JOIN flights ON flights.flightNumbers = airlines.flightNumber JOIN airports WHERE flights.departureAirport = 'New York' AND flights.stopsNumber = 0 AND flights.averageTicketPrice < 500 AND airports.dutyFree = 'yes' AND airlines.isMealincluded = 'yes'";
+sql17 = "SELECT airlines.airline FROM flights RIGHT JOIN airlines ON flights.flightNumbers = airlines.flightNumber WHERE airlines.webRegistration = 'yes' AND (flights.arrivalAirport = 'Milan' OR flights.arrivalAirport = 'Helsinki') AND flights.averageTicketPrice < 100";
