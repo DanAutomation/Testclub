@@ -84,6 +84,7 @@ public static void main(String[] args) throws SQLException{
 		public static void printRs(ResultSet rs) throws SQLException{    // run method printRs
 			ResultSetMetaData rsmd = rs.getMetaData();  // get rs and input in method getMetaData();
 			int quontOfColumn = rsmd.getColumnCount();  // get quontity of columns
+			ArrayList<String> arr = new ArrayList<String>();
 			String a;   // initialize variable
 			while(rs.next()){  // while cycle, check every value till end
 		    
