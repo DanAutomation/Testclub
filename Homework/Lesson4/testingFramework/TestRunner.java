@@ -1,4 +1,4 @@
-package testingFramework;
+package Lesson4.testingFramework;
 
 import java.util.ArrayList;
 import jxl.*;
@@ -9,6 +9,12 @@ import java.io.File;
 import java.io.IOException;
 
 public class TestRunner {
+	
+	public String dbConnectionName = "";
+	public String dbUser = "";
+	public String dbPassword = "";
+	
+	
 
 	private ArrayList<String[]> TestCases = new ArrayList<String[]>();
 	String[] data;
@@ -22,13 +28,13 @@ public class TestRunner {
 
 			while (true) {
 				String stepNumber = wrk1.getSheet(0).getCell(0, i).getContents();
-				String actionToDo = wrk1.getSheet(0).getCell(1, i).getContents();
-				String expectedResult = wrk1.getSheet(0).getCell(2, i).getContents();
+				String stepDescription = wrk1.getSheet(0).getCell(1, i).getContents();
+				String actionToDo = wrk1.getSheet(0).getCell(2, i).getContents();
+				String expectedResult = wrk1.getSheet(0).getCell(3, i).getContents();
 				String actualResult = "";
 				String testResult = "";
 
 				data = new String[] { stepNumber, actionToDo, expectedResult, actualResult, testResult };
-				
 				TestCases.add(i - 1, data);
 
 				i++;
@@ -60,7 +66,7 @@ public class TestRunner {
 
 	public void executeTestCases() {
 		for (String[] x : TestCases) {
-			RunSQL myQuery = new RunSQL(x[1]);
+			RunSQL myQuery = new RunSQL(dbConnectionName, dbUser, dbPassword, x[1]);
 			x[3] = myQuery.getResultToString();
 	}
 
@@ -70,7 +76,7 @@ public class TestRunner {
 		//It should be removed after testing 
 		
 		TestRunner myRunner = new TestRunner();
-		myRunner.loadTestCaseData("D://testingFramework//config//TestCases.xls");
+		myRunner.loadTestCaseData("D://projects//Test//src//Lesson4//testingFramework//testCases.xls");
 		myRunner.showTestCaseData();
 		myRunner.executeTestCases();
 		

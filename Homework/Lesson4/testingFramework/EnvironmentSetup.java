@@ -1,44 +1,113 @@
-package testingFramework;
+package Lesson4.testingFramework;
 
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
 
 
 public class EnvironmentSetup {
 	
-    Properties props = new Properties();
-    java.sql.Connection myConn;
+
     
 
-	public void CreateDbTablesWithData(String DB_USER, String DB_CONNECTION_STRING, String DB_PASSWORD, String nameOfScriptInFile, String PATH_TO_SCRIPTS) throws SQLException, FileNotFoundException, IOException {
-		// законнектиться к базе используя путь
-		// используя скрипты из файла выполнить каждый из них
+	private static final String DB_USER = "";
+	private static final String DB_PASSWORD = "";
+	private static final String DB_CONNECTION_STRING = "";
+	private static final String PATH_TO_SCRIPTS = "";
+	
+
+	public void CreateDbTablesWithData(String DB_USER, String DB_PASSWORD,
+			String DB_CONNECTION_STRING, 
+			String PATH_TO_SCRIPTS) throws FileNotFoundException, IOException {
+	
+		 try (
+		         // Step 1: Allocate a database "Connection" object
+		         Connection conn = DriverManager.getConnection(
+		        		 DB_CONNECTION_STRING, DB_USER, DB_PASSWORD); // MySQL
+		 
+		         // Step 2: Allocate a "Statement" object in the Connection
+		         Statement stmt = conn.createStatement();
+		      ) {
+		         // Step 3: Execute a SQL SELECT query, the query result
+		         //  is returned in a "ResultSet" object.
+		     //-------------------
+			 
+			 
+			 try {
+					File file = new File(PATH_TO_SCRIPTS);
+					
+					FileReader fileReader = new FileReader(file);
+					BufferedReader bufferedReader = new BufferedReader(fileReader);
+					
+					String myQuery;
+					while ((myQuery = bufferedReader.readLine()) != null) {
+					
+						stmt.executeUpdate(myQuery);	
+						
+					}
+					fileReader.close();
+					
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			 
+			 
+		
+			 
+	
+		         
+		      } catch(SQLException ex) {
+		         ex.printStackTrace();
+		      }
+		 
+       
+
+     
 		
 		
-		myConn = DriverManager.getConnection(DB_CONNECTION_STRING, DB_USER, DB_PASSWORD);
-		props.load(new FileInputStream(PATH_TO_SCRIPTS));
-		java.sql.PreparedStatement table = myConn.prepareStatement(nameOfScriptInFile);  
-	    table.executeUpdate(nameOfScriptInFile);
-		System.out.println("\nConnection successful!\n"); // information field
 		
 	}
 
-	public String getFromIniFile(String string, String pathToIni) throws FileNotFoundException, IOException {
+	public String getFromIniFile(String myParam, String pathToIni) throws FileNotFoundException, IOException {
 		String parametrValue = "";
-		//открыть файл по адресу pathToIni
-		// найти строку, которая начинается со Стринг
-		// DB_NAME = testclub
-		props.load(new FileInputStream(pathToIni)); 
-		parametrValue = props.getProperty(string);
-		
+		// открыть файл для чтения
+		// вычитываем в стринговую переменную построчно
+		// если строка начинается с символов  myParam + "= ", то присвоить в переменную parametrValue все что правее
+		try {
+			File file = new File(pathToIni);
+			FileReader fileReader = new FileReader(file);
+			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			
+			String line;
+			while ((line = bufferedReader.readLine()) != null) {
+				
+				if (line.substring(0, myParam.length()).equals(myParam))
+				{
+					parametrValue = line.substring(myParam.length() + 1, line.length());
+				}
+				
+			}
+			fileReader.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
 		return parametrValue;
+	}
+	
+	public static void main(String[] args) throws FileNotFoundException, IOException{
+		EnvironmentSetup a = new EnvironmentSetup();
+		a.CreateDbTablesWithData(DB_USER, DB_PASSWORD, DB_CONNECTION_STRING, PATH_TO_SCRIPTS);
 	}
 
 

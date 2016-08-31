@@ -1,4 +1,4 @@
-package testingFramework;
+package Lesson4.testingFramework;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -11,7 +11,6 @@ public class Launcher {
 		Runner myInstance = new Runner();
 		
 		myInstance.loadConfigurations();
-		myInstance.setUpEnvironment();
 		myInstance.runTestCases();
 		myInstance.generateTestReport();
 
