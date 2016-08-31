@@ -9,6 +9,7 @@ public RunSQL (String query){
 }
 
 public String getResultToString() {
+	
     String convertedResult;
 	return "";
 	
