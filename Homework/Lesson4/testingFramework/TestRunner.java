@@ -28,9 +28,8 @@ public class TestRunner {
 
 			while (true) {
 				String stepNumber = wrk1.getSheet(0).getCell(0, i).getContents();
-				String stepDescription = wrk1.getSheet(0).getCell(1, i).getContents();
-				String actionToDo = wrk1.getSheet(0).getCell(2, i).getContents();
-				String expectedResult = wrk1.getSheet(0).getCell(3, i).getContents();
+				String actionToDo = wrk1.getSheet(0).getCell(1, i).getContents();
+				String expectedResult = wrk1.getSheet(0).getCell(2, i).getContents();
 				String actualResult = "";
 				String testResult = "";
 
@@ -51,17 +50,17 @@ public class TestRunner {
 
 	public void prepareTestReportData() {
 		for (String[] x : TestCases) {
-			if (x[2] == x[3]) {
-				x[4] = TestStatus.values()[0].toString();
+			if (x[1] == x[2]) {
+				x[3] = TestStatus.values()[0].toString();
 			} else {
-				x[4] = TestStatus.values()[1].toString();
+				x[3] = TestStatus.values()[1].toString();
 			}
 		}
 	}
 
 	public void showTestCaseData() {
 		for (String[] x : TestCases)
-			System.out.println(x[0] + " " + x[1] + " " + x[2] + " " + x[3] + " " + x[4]);
+			System.out.println(x[0] + " " + x[1] + " " + x[2] + " " + x[3]);
 	}
 
 	public void executeTestCases() {

@@ -21,7 +21,7 @@ public class RunSQL {
 
 public RunSQL (String dbConnectionName,  String dbUser, String dbPassword, String myQuery){
 	
-	this.query = query;
+
 	this.dbConnectionName = dbConnectionName;  // driver for connection
 	this.dbUser = dbUser; // login
 	this.dbPassword = dbPassword;  // password
@@ -30,7 +30,6 @@ public RunSQL (String dbConnectionName,  String dbUser, String dbPassword, Strin
 
 public String getResultToString() {
     String convertedResult = "";
-	//-----------
     
     try (
 	         // Step 1: Allocate a database "Connection" object
@@ -44,62 +43,31 @@ public String getResultToString() {
 	        //  is returned in a "ResultSet" object.
 	    			
 					ResultSet rs = stmt.executeQuery(query);
-					ResultSetMetaData rsmd = rs.getMetaData();  // get rs and input in method getMetaData();
-					int quontOfColumn = rsmd.getColumnCount();  // get quontity of columns
-					ArrayList<String> arr = new ArrayList<String>();
-					String result;   // initialize variable
+					String valOfCell = null;   // initialize variable
+					
 					//Теперь пора поработать с ResultSet
 					while (rs.next()) {
-//Из запроса нужно извлечь имя поля, которое мы будем искать в ResultSet
+                        //Из запроса нужно извлечь имя поля, которое мы будем искать в ResultSet
 						//Сделать это нужно через substring 
 						//Ищем, какой номер позиции int startPosition у фразы " FROM " в строке
 						//Через substring забираем начало до слова " FROM "
 						//Ищем пробел, начиная с конца откушенной фразы 
 						//Как только нашли номер позиции int endPosition - substring!!! 
-						  for(int i = 2; i <= quontOfColumn; i++){ // go through all colomns 
-							    result = rs.getString(i) + ";";  // get values
-/*
- public String delDel(String str) {
- if (str.length()>=4 && str.substring(1, 4).equals("del")) {
-    // First char + rest of string starting at 4
-    return str.substring(0, 1) + str.substring(4);
-  }
-  // Otherwise return the original string.
-  return str;
-}
- */
+
+
 							    String from = " FROM ";
 							    int end = query.indexOf(from);
 							    String nameSqlQuerry = query.substring(6, end);
-//							    String nameSqlQuerry = query.substring(0, 6);
-//							    String a = query.substring(nameSqlQuerry.length(), "from");
-//							    
+							    valOfCell = rs.getString(nameSqlQuerry) + ";";
 
-
-							    	
-
-//							
-							int name = query.length();
+							    
 							    }
-							    /*
-						String userid = rs.getString("USER_ID");
-						String username = rs.getString("USERNAME");
-
-						System.out.println("userid : " + userid);
-						System.out.println("username : " + username);
-*/
-					}
-					
-					
-					//
-					
-//					}
+					return valOfCell;
 
 		  } catch (SQLException ex) {
 	         ex.printStackTrace();
 	      }
     
-    //-----------
 	return convertedResult;
 }
 

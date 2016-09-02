@@ -27,10 +27,14 @@ public class EnvironmentSetup {
 	
 
 	public void CreateDbTablesWithData(String DB_USER, String DB_PASSWORD,
+			
 			String DB_CONNECTION_STRING, 
-			String PATH_TO_SCRIPTS) throws FileNotFoundException, IOException {
-	
+			
+			String PATH_TO_SCRIPTS) throws FileNotFoundException, IOException, ClassNotFoundException {
+		String driver = "com.mysql.jdbc.Driver";
+		Class.forName(driver);
 		 try (
+				 
 		         // Step 1: Allocate a database "Connection" object
 		         Connection conn = DriverManager.getConnection(
 		        		 DB_CONNECTION_STRING, DB_USER, DB_PASSWORD); // MySQL
@@ -79,6 +83,7 @@ public class EnvironmentSetup {
 	}
 
 	public String getFromIniFile(String myParam, String pathToIni) throws FileNotFoundException, IOException {
+		
 		String parametrValue = "";
 		// открыть файл для чтения
 		// вычитываем в стринговую переменную построчно
@@ -105,7 +110,8 @@ public class EnvironmentSetup {
 		return parametrValue;
 	}
 	
-	public static void main(String[] args) throws FileNotFoundException, IOException{
+	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException{
+		Class.forName("com.mysql.jdbc.Driver");
 		EnvironmentSetup a = new EnvironmentSetup();
 		a.CreateDbTablesWithData(DB_USER, DB_PASSWORD, DB_CONNECTION_STRING, PATH_TO_SCRIPTS);
 	}
