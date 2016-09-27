@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="0" total="9" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="200" started-at="2016-09-22T02:34:04Z" finished-at="2016-09-22T02:34:04Z">
+    <groups>
+      <group name="functional">
+        <method signature="NewTest.checkName()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkName" class="MyApplication.NewTest"/>
+        <method signature="NewTest.checkSurname()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkSurname" class="MyApplication.NewTest"/>
+      </group> <!-- functional -->
+      <group name="smoke">
+        <method signature="NewTest.checkNameSurname()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkNameSurname" class="MyApplication.NewTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="Default test" duration-ms="200" started-at="2016-09-22T02:34:04Z" finished-at="2016-09-22T02:34:04Z">
+      <class name="MyApplication.NewTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="setUp" is-config="true" duration-ms="12" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="checkExperience()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkExperience" duration-ms="13" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkExperience -->
+        <test-method status="PASS" signature="checkDiplon()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkDiplon" is-config="true" duration-ms="0" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDiplon -->
+        <test-method status="PASS" signature="checkName()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkName" duration-ms="1" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkName -->
+        <test-method status="PASS" signature="checkDiplon()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkDiplon" is-config="true" duration-ms="2" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDiplon -->
+        <test-method status="PASS" signature="checkPosition()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkPosition" duration-ms="2" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPosition -->
+        <test-method status="PASS" signature="checkDiplon()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkDiplon" is-config="true" duration-ms="1" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDiplon -->
+        <test-method status="PASS" signature="checkSalary()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkSalary" duration-ms="2" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSalary -->
+        <test-method status="PASS" signature="checkSurname()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkSurname" duration-ms="1" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSurname -->
+        <test-method status="PASS" signature="checkDiplon()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkDiplon" is-config="true" duration-ms="0" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDiplon -->
+        <test-method status="PASS" signature="checkDiplon()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkDiplon" is-config="true" duration-ms="0" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDiplon -->
+        <test-method status="SKIP" signature="getSex(java.lang.String)[pri:0, instance:MyApplication.NewTest@1fcfece]" name="getSex" duration-ms="0" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'sex' is required by @Test on method getSex but has not been marked @Optional or defined
+in C:\Users\Work\AppData\Local\Temp\testng-eclipse--1796988274\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'sex' is required by @Test on method getSex but has not been marked @Optional or defined
+in C:\Users\Work\AppData\Local\Temp\testng-eclipse--1796988274\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:156)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:363)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:488)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1240)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:980)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1070)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSex -->
+        <test-method status="PASS" signature="checkNameSurname()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkNameSurname" duration-ms="2" started-at="2016-09-22T05:34:04Z" depends-on-methods="MyApplication.NewTest.checkSurname, MyApplication.NewTest.checkName" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNameSurname -->
+        <test-method status="PASS" signature="checkDiplon()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkDiplon" is-config="true" duration-ms="3" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDiplon -->
+        <test-method status="PASS" signature="getWorkingMonth()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="getWorkingMonth" duration-ms="1" started-at="2016-09-22T05:34:04Z" depends-on-methods="MyApplication.NewTest.checkPosition" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getWorkingMonth -->
+        <test-method status="PASS" signature="checkDiplon()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkDiplon" is-config="true" duration-ms="1" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDiplon -->
+        <test-method status="PASS" signature="getWorkingYear()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="getWorkingYear" duration-ms="2" started-at="2016-09-22T05:34:04Z" depends-on-methods="MyApplication.NewTest.checkPosition" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getWorkingYear -->
+        <test-method status="PASS" signature="checkDiplon()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="checkDiplon" is-config="true" duration-ms="1" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDiplon -->
+        <test-method status="PASS" signature="endOfTesting()[pri:0, instance:MyApplication.NewTest@1fcfece]" name="endOfTesting" is-config="true" duration-ms="1" started-at="2016-09-22T05:34:04Z" finished-at="2016-09-22T05:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endOfTesting -->
+      </class> <!-- MyApplication.NewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
