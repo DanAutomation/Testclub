@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+ <suite name="unit1" parallel="false">
+  <test name="sdgf">
+  <parameter name="sex" value="woman"/>
+     <groups>
+       <run>
+          <include name="functional" /> 
+          <include name="smoke" />
+       </run>
+     </groups>
+     <classes>
+      <class name = "MyApplication.NewTest"/>
+     </classes>
+
+  </test> 
+</suite>
