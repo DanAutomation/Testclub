@@ -1,0 +1,38 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.awt.AWTException;
+import java.awt.GraphicsConfiguration;
+import java.awt.GraphicsEnvironment;
+import java.io.IOException;
+
+import org.monte.screenrecorder.ScreenRecorder;
+
+public class TestAddNewPost {
+
+
+	public static void main(String[] args) throws IOException, AWTException{
+		
+		System.setProperty("webdriver.gecko.driver", "browsers//geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "browsers//chromedriver.exe");
+		
+		ScreenRecorder screenRecorder;
+		GraphicsConfiguration gc = GraphicsEnvironment.getLocalGraphicsEnvironment() .getDefaultScreenDevice() .getDefaultConfiguration();
+		screenRecorder = new ScreenRecorder(gc);
+		screenRecorder.start();
+		WebDriver driver = new ChromeDriver();
+		
+		AdminLoginPage adminLoginPage = new AdminLoginPage(driver);
+		adminLoginPage.login();
+		
+
+		
+		AdminAddPost adminAddPost = new AdminAddPost(driver);
+		adminAddPost.addNew();
+		adminAddPost.newTitle();
+		adminAddPost.newDescription();
+		adminAddPost.clickPublish();
+		screenRecorder.stop();
+
+  }
+}
