@@ -1,0 +1,22 @@
+public class AdminLoginPage {
+	
+	WebDriver driver;
+	WebElement email;
+	WebElement pass;
+	WebElement submit;
+	
+	public AdminLoginPage (WebDriver driver){
+		this.driver = driver;
+		driver.manage().window().setSize(new Dimension(10000, 10000));
+        driver.get("http://familyzuev.wordpress.com/wp-admin");
+        email = driver.findElement(By.id("user_login"));
+        pass = driver.findElement(By.id("user_pass"));
+        submit = driver.findElement(By.id("wp-submit"));
+	}
+	
+	public void login(){
+		email.sendKeys("daniilzuyev@gmail.com");
+	    pass.sendKeys("z3003d1987");
+	    submit.click();
+	}
+}
