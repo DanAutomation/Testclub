@@ -1,0 +1,42 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class AdminAddPost{
+	WebDriver driver;
+	
+	WebElement addNewPost;
+	WebElement postBody;
+	WebElement title;
+	WebElement publish;
+	
+	public AdminAddPost(WebDriver driver) {
+		this.driver = driver;
+		driver.get("http://familyzuev.wordpress.com/wp-admin/edit.php");
+	}
+
+	public void addNew(){
+		addNewPost = driver.findElement(By.linkText("Add New"));
+		addNewPost.click();
+	}
+	
+	public void newTitle(){
+	    driver.switchTo().defaultContent();
+	    title = driver.findElement(By.id("title"));
+	    title.click();
+	    title.sendKeys("First Post");
+	}
+	
+	public void newDescription(){
+		driver.switchTo().frame("content_ifr");
+		postBody = driver.findElement(By.id("tinymce"));
+	    postBody.sendKeys("First description");
+	}
+	
+	public void clickPublish(){
+		driver.switchTo().defaultContent();
+	    publish = driver.findElement(By.id("publish"));
+	    publish.click();
+	}
+
+}
