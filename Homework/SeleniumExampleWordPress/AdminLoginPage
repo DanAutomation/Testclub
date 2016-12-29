@@ -16,7 +16,7 @@ public class AdminLoginPage {
 	
 	public void login(){
 		email.sendKeys("daniilzuyev@gmail.com");
-	    pass.sendKeys("z3003d1987");
+	    pass.sendKeys("pass");
 	    submit.click();
 	}
 }
