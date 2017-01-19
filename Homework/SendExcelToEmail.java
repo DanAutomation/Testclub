@@ -19,6 +19,7 @@ import javax.mail.internet.MimeMultipart;
 public class SendExcelToEmail {
 
 	// jars - mail.jar; jave-1.0.2.jar; selenium if required
+	// use info from here for gmail email (From) http://stackoverflow.com/questions/25341198/javax-mail-authenticationfailedexception-is-thrown-while-sending-email-in-java
 	
     public static void sendEmailWithAttachments(String host, String port,
             final String userName, final String password, String toAddress,
